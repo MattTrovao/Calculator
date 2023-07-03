@@ -1,0 +1,19 @@
+$green: #606c38;
+$green500: #283618;
+$brown: #dda15e;
+$brown500: #bc6c25;
+$bg: #fefae0;
+$white: #e2e2e2;
+$black: #313131;
+
+$transition: all ease-in-out .4s;
+$radius: 10px;
+
+html, body {
+  font-family: 'Fira Sans', sans-serif;
+  background: $bg;
+}
+
+.mono {
+  font-family: 'Fira Mono', monospace;
+}

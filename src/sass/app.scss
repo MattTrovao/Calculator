@@ -1,0 +1,266 @@
+@import 'ds';
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Page
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.content {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 1rem .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// Tab
+.tab {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid $brown500;
+
+  .btn {
+    border-radius: $radius $radius 0 0
+  }
+}
+
+// Btn
+.btn {
+  @extend .mono;
+  padding: .8rem 1rem;
+  border: 2px solid $brown500;
+  border-bottom: 0;
+  border-radius: $radius;
+  font-size: 1rem;
+  font-weight: bold;
+  background: $brown500;
+  color: $white;
+  cursor: pointer;
+  transition: $transition;
+
+  &:not(:disabled):hover {
+    box-shadow: 0 0 4px 6px rgba($brown, .5);
+  }
+
+  &:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+  &.green {
+    background: $green500;
+
+    &:not(:disabled):hover {
+      box-shadow: 0 0 4px 6px rgba($green, .5);
+    }
+  }
+
+  &.active {
+    background: transparent;
+    color: $brown500;
+  }
+
+  &.small {
+    padding: .5rem .8rem;
+    font-size: .8rem;
+  }
+}
+
+// Calculator
+.calculator {
+  background: $white;
+  border-radius: $radius;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .name {
+    @extend .mono;
+    font-size: .8rem;
+    position: relative;
+    font-weight: 600;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: $brown500;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    span {
+      background: $white;
+      padding-right: 1.5rem;
+      position: relative;
+      color: inherit;
+      z-index: 2;
+    }
+  }
+
+  .fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1.5rem;
+
+    & > * {
+      flex: 1 auto;
+    }
+
+    .fields__group {
+      border: none;
+
+      & > label{
+        display: block;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+      }
+
+      input[type="number"],
+      input[type="text"],
+      select{
+        @extend .mono;
+        border: 1px solid $brown500;
+        width: 100%;
+        height: 2rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: $bg;
+        color: $black;
+        font-size: .8rem;
+      }
+
+      .radio {
+        display: flex;
+        gap: .5rem;
+        margin-bottom: .8rem;
+
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+
+        input[type="radio"] {
+          -webkit-appearance: none;
+          appearance: none;
+          /* For iOS < 15 */
+          background-color: $white;
+          margin: 0;
+          font: inherit;
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 0.15rem solid $black;
+          border-radius: 50%;
+          transform: translateY(-0.075em);
+          transition: $transition;
+          display: grid;
+          place-content: center;
+
+          &::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            border-radius: 50%;
+            transform: scale(0);
+            background: $brown500;
+          }
+
+          &:checked::before {
+            transform: scale(1);
+          }
+
+          &:focus,
+          &:hover {
+            border-color: $brown500;
+          }
+        }
+
+        label{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+
+  .value {
+    $fontSize: 4rem;
+    font-size: $fontSize;
+    text-align: center;
+    span{
+      font-size: calc($fontSize / 2);
+    }
+  }
+
+  .calc{
+    border: 2px solid $brown500;
+    border-radius: $radius;
+    padding: 1rem;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;;
+
+    p{
+      font-size: .8rem;
+      text-align: center;
+      position: relative;
+      flex: 1 auto;
+
+      &::after{
+        content: "";
+        width: 2px;
+        height: 100%;
+        background: $brown500;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &:last-of-type{
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 900px) { 
+  .calculator {
+    .fields {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calc{
+      flex-direction: column;
+      p{
+        &::after{
+          width: 100%;
+          height: 2px;
+          top: calc(100% + .5rem);
+          transform: unset;
+        }
+      }
+    }
+  }
+}
