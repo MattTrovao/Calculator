@@ -12,6 +12,7 @@ $radius: 10px;
 html, body {
   font-family: 'Fira Sans', sans-serif;
   background: $bg;
+background: radial-gradient(circle, $bg 60%, $white 100%);
 }
 
 .mono {

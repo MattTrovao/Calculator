@@ -16,9 +16,11 @@
 .content {
   max-width: 85%;
   margin: 0 auto;
-  padding: 1rem .5rem;
+  padding: 0 .5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   gap: 2rem;
 }
 
