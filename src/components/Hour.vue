@@ -8,9 +8,9 @@
       <label for="hours">Total de Horas (por semana)</label>
 
       <select id="hours" v-model="workHours">
-        <option value="44">44 Horas</option>
-        <option value="36">36 Horas</option>
-        <option value="20">20 Horas</option>
+        <option value="44">44 Horas (8h)</option>
+        <option value="36">36 Horas (6h)</option>
+        <option value="20">20 Horas (4h)</option>
       </select>
     </fieldset>
 
