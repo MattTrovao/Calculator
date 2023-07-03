@@ -60,6 +60,7 @@
 
   &.green {
     background: $green500;
+    border-color: $green500;
 
     &:not(:disabled):hover {
       box-shadow: 0 0 4px 6px rgba($green, .5);
