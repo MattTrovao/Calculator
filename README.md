@@ -1,3 +1,6 @@
+# Web Version
+(Link)[https://calculator-thunderbeetle.vercel.app/]
+
 # Calculator
 
 Projeto para calcular:
