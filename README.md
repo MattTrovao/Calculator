@@ -1,7 +1,27 @@
-# Vue 3 + Vite
+# Calculator
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Projeto para calcular:
+- Valor da Hora trabalhada
+- Taxa de Juros
+- IMC
 
-## Recommended IDE Setup
+# Rodar o Projeto
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Faça download do projeto
+- Navegue até a pasta do projeto `cd Calculator`
+- Rode o comando `npm i`
+- Após instalar depências rode o comando `npm run dev`
+
+---
+
+# Calculator
+Project to calc
+- Value of work hour
+- Fees tax
+- BMI
+
+# Run the project
+- Download the project
+- Go to project folder `cd Calculator`
+- Run the comand `npm i`
+- After the instalation, run the comand `npm run dev`
