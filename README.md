@@ -1,5 +1,5 @@
 # Web Version
-(Link)[https://calculator-thunderbeetle.vercel.app/]
+[Link](https://calculator-thunderbeetle.vercel.app/)
 
 # Calculator
 
